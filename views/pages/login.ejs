@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <%- include('../partials/head') %>
+    <style>
+            center{
+                border:2px solid;
+                margin-top:5rem;
+                margin-left:25rem;
+                margin-right:25rem;
+            }
+            .form group input {
+                width:300px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+        </style>
+</head>
+
+</html>
+
+<body class="">
+    
+    <center>
+        <h2 class="display-3">Log In</h2>
+        <% if(errmsg) { %>
+            <p class="text-danger"><%=errmsg %> </p>
+        <% }else if(notfound){%>
+            <p class="text-danger"><%=notfound%><a href="/user/register"> click here</a></p>
+        <% } %>
+        <form action="/user/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" placeholder="email" name="email" required/><br /><br/>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Password" name="password" required/><br />
+                <button class="btn btn-success">Login</button>
+                <p>Not Registered?<a href="/user/register" style="color: rgba(16, 238, 27, 0.678);">register</a></p>
+            </div>
+        </form>
+    </center>
+<script>
+
+</script>
+</body>

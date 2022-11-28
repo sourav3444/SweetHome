@@ -1,0 +1,54 @@
+
+        .demo {
+            /* height: 200px;
+            width: .200px; */
+            display: inline-block;
+
+        }
+        .innerdemo{
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            border: solid;
+            margin: 2rem;
+            padding: 2rem;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+
+            background-color: yellowgreen;
+        }
+        .buyhd{
+            padding: 1rem;
+            position: relative;
+            left: 12rem;
+
+        }
+        .buy{
+
+            height: 200px;
+            width:400px;
+            padding-top: 4rem;
+            text-align: center;
+            background-color: aqua;
+            display: inline-block;
+            margin-right:2rem;
+            font-size: 40px;
+            border:1px solid;
+            /* border-radius:40%; */
+            font-family:pristina;
+            color: white;
+        }
+        .buy:hover{
+            background-color:#fff;
+            transition: 0.8s;
+            color: black;
+        }
+
+        img{
+            height:400px;
+            width:100%;
+        }
+        .navbar{
+            position: fixed;
+            width:100%;
+        }

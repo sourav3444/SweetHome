@@ -1,0 +1,64 @@
+<html>
+        <head>
+            <%- include('../partials/head') %>
+        </head>
+    <body>
+        <header>
+            <%- include('../partials/_admin_head') %>
+        </header>
+        <br><br><br><br>
+        <main>
+
+          <div class="container">
+            <center><h2>Admin Controller</h2></center>
+            <div class="d-inline-block">
+              <form action="" method="POST">
+                <button class="btn btn-primary" type="submit">All Users</button>
+              </form>  
+            </div>
+            <div class="d-inline-block">
+              <form action="/seller" method="POST">
+                <button class="btn btn-primary" type="submit">Seller</button>
+              </form>
+
+            </div>
+             <div class="d-inline-block">
+              <form action="/buyer" method="POST">
+                <button class="btn btn-primary" type="submit">Buyer</button>
+              </form> 
+             </div>
+            
+          </div>
+        <% if(data) {%>
+            <table class="table table-hover container">
+              <thead>
+                <tr>
+                  <th>username</th>
+                  <th>Email</th>
+                  <th>options</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%data.forEach(data => { %>
+                
+                  <tr>
+                  <td><%= data.username%></td>
+                  <td><%=data.email%></td>
+                  <td>
+                    <div class="d-inline-block float-right"><button>delete</button></div>
+                    <div class="d-inline-block float-right"><button>edit</button></div>
+                    <div class="d-inline-block float-right"><button>view</button></div>
+                  </td>  
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          <% } %>
+           
+        </main>
+        
+        <footer>
+            <%- include('../partials/footer') %>
+        </footer>
+    </body>
+</html>
